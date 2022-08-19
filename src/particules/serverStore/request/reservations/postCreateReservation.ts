@@ -4,7 +4,7 @@ import { TCreateReservation } from '../../mutations/reservations/useCreateReserv
 type IPostCreateReservation = (body: TCreateReservation) => Promise<any>;
 
 const postCreateReservation: IPostCreateReservation = async (body) => {
-  return await axiosFetch("/orders", {
+  return await axiosFetch('/orders', {
     method: 'POST',
     data: body,
   }).then((response) => {
