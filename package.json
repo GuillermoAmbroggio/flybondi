@@ -1,0 +1,60 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "cy:run": "cypress run --record --key 1393eedf-5c9a-4f8d-8923-109324135d92",
+    "test": "start-server-and-test start http-get://localhost:3000 cy:run",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
+    "lint:fix": "eslint --fix src/**/*.{js,jsx,ts,tsx,json}",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx,css,md,json} --config ./.prettierrc"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|jsx|ts|tsx)": [
+      "eslint",
+      "prettier --write",
+      "npm run test -- --watchAll=false --passWithNoTests"
+    ]
+  },
+  "dependencies": {
+    "antd": "^4.21.0",
+    "axios": "^0.27.2",
+    "immer": "^9.0.15",
+    "jspdf": "^2.5.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-query": "^3.39.1",
+    "react-router-dom": "^6.3.0",
+    "util": "^0.10.3",
+    "zustand": "^4.0.0-rc.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.41",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "@typescript-eslint/parser": "^5.33.1",
+    "@vitejs/plugin-react": "^1.3.0",
+    "cypress": "^10.3.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.1",
+    "less": "^4.1.3",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "start-server-and-test": "^1.14.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.9"
+  }
+}

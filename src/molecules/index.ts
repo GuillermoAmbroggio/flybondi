@@ -1,0 +1,11 @@
+export { default as Input } from './input/Input';
+export { default as InputSelect } from './inputSelect/InputSelect';
+export { default as Card } from './card/Card';
+export { default as Button } from './button/Button';
+export { default as InputSlider } from './inputSlider/InputSlider';
+export { default as CardTrip } from './cardTrip/CardTrip';
+export { default as CardSummary } from './cardSummary/CardSummary';
+export { default as GoBackButton } from './goBackButton/GoBackButton';
+export { default as CardPayments } from './cardPayments/CardPayments';
+export { default as CardReservation } from './cardReservation/CardReservation';
+export { default as NavbarAccountSection } from './navbarAccountSection/NavbarAccountSection';

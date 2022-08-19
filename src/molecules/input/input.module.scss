@@ -1,0 +1,63 @@
+.inputStyle {
+  height: 44px;
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 18px;
+  border: 1px solid #ced4da;
+  border-color: var(--grey);
+  width: -webkit-fill-available;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--primary-text);
+  padding: 0px 20px;
+
+  &::placeholder {
+    color: var(--secondary-text);
+  }
+
+  &:focus {
+    outline: none !important;
+    border: 2px solid;
+    border-color: var(--primary);
+  }
+}
+
+.containerMessage {
+  padding: 0px 4px;
+  display: flex;
+}
+
+.inputStylePasswordContainer {
+  height: 44px;
+  width: -webkit-fill-available;
+  padding: 0px 20px;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  border-color: var(--grey);
+  &::placeholder {
+    color: var(--secondary-text);
+  }
+
+  &:focus-within {
+    border: 2px solid;
+    border-color: var(--primary);
+  }
+}
+.inputStylePassword {
+  box-shadow: none;
+  font-size: 18px;
+  border: none;
+  height: max-content;
+
+  width: -webkit-fill-available;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--primary-text);
+
+  &::placeholder {
+    color: var(--secondary-text);
+  }
+  &:focus {
+    outline: none !important;
+  }
+}

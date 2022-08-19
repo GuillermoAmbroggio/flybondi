@@ -1,0 +1,78 @@
+:root {
+  /* tokens */
+  --primary: #f9ba15;
+  --secondary: #ff4040;
+  --tertiary: #2ec4b6;
+  --dark: #0a1014;
+  --grey: #182329;
+  --mid-grey: #9b9b9b;
+  --light-grey: #e9e8e8;
+  --white: #ffffff;
+  --background: #ffffff;
+  --error: red;
+  --success: green;
+
+  /* Sizes*/
+  --xxs: 8px;
+  --xs: 12px;
+  --s: 14px;
+  --m: 16px;
+  --l: 24px;
+  --xl: 32px;
+  --xxl: 42px;
+
+  /* texts colors */
+  --primary-text: var(--grey);
+  --secondary-text: var(--mid-grey);
+  --tertiary-text: var(--light-grey);
+  --success-text: var(--success);
+  --error-text: var(--error);
+  --disabled-text: var(--mid-grey);
+  --color-text-default: var(--primary);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-text);
+}
+
+p {
+  margin: 0px;
+  display: contents;
+}
+
+.ant-card {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: 'tnum';
+  position: relative;
+  background: var(--white);
+  border-radius: var(--m);
+}
+
+.ant-input-number {
+  width: -webkit-fill-available;
+}
+
+.ant-picker {
+  width: -webkit-fill-available;
+}
+
+.root {
+  min-height: 100vh;
+}
