@@ -76,6 +76,7 @@ const Home: React.FC = () => {
               <Text variant='label'>Origen</Text>
               <Form.Item name='city_from' rules={[{ required: true }]}>
                 <InputSelect
+                  id='inputSelectCityFromByDestination'
                   placeholder='Elige una ciudad'
                   dataSelect={arrayCountries}
                   onChange={(value) => {
@@ -88,6 +89,7 @@ const Home: React.FC = () => {
               <Text variant='label'>Destino</Text>
               <Form.Item name='city_to' rules={[{ required: true }]}>
                 <InputSelect
+                  id='inputSelectCityToByDestination'
                   placeholder='Elige una ciudad'
                   dataSelect={arrayCountries}
                   onChange={(value) => {
@@ -106,10 +108,15 @@ const Home: React.FC = () => {
                   { type: 'number', min: 1 },
                 ]}
               >
-                <InputNumber addonBefore={<UserOutlined />} size='large' />
+                <InputNumber
+                  id='inputPassengersByDestination'
+                  addonBefore={<UserOutlined />}
+                  size='large'
+                />
               </Form.Item>
             </Column>
             <Button
+              id='buttonSubmitByDestination'
               htmlType='submit'
               text='Buscar vuelos'
               size='large'
@@ -145,6 +152,7 @@ const Home: React.FC = () => {
                 ]}
               >
                 <InputSlider
+                  id='inputPriceMinByPrice'
                   onChangeSlider={(newValue: number) =>
                     onChange(newValue, 'price_min')
                   }
@@ -173,6 +181,7 @@ const Home: React.FC = () => {
                   minValue={minMaxPrice.data?.min}
                   numberValue={numberValueMax}
                   name='price_max'
+                  id='inputPriceMaxByPrice'
                 />
               </Form.Item>
             </Column>
@@ -187,10 +196,15 @@ const Home: React.FC = () => {
                   { type: 'number', min: 1 },
                 ]}
               >
-                <InputNumber addonBefore={<UserOutlined />} size='large' />
+                <InputNumber
+                  id='inputPassengersByPrice'
+                  addonBefore={<UserOutlined />}
+                  size='large'
+                />
               </Form.Item>
             </Column>
             <Button
+              id='buttonSubmitByPrice'
               text='Buscar vuelos'
               size='large'
               className={styles.buttonStyle}

@@ -8,6 +8,7 @@ interface IInputSliderProps {
   minValue?: number;
   maxValue?: number;
   name?: string | undefined;
+  id?: string;
 }
 
 const InputSlider: React.FC<IInputSliderProps> = ({
@@ -16,6 +17,7 @@ const InputSlider: React.FC<IInputSliderProps> = ({
   minValue,
   maxValue,
   name,
+  id,
 }) => {
   return (
     <Column>
@@ -26,8 +28,10 @@ const InputSlider: React.FC<IInputSliderProps> = ({
         onChange={onChangeSlider}
         size='large'
         name={name}
+        id={id}
       />
       <Slider
+        id={id}
         min={minValue ?? 0}
         max={maxValue ?? 0}
         onChange={onChangeSlider}
