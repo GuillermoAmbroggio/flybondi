@@ -6,11 +6,12 @@ const { Option } = Select;
 
 interface IInputSelectProps extends SelectProps {
   dataSelect?: { value: string; text: string }[];
+  id?: string;
 }
 
 const InputSelect: React.FC<IInputSelectProps> = ({
   dataSelect = [],
-
+  id,
   ...rest
 }) => {
   return (
@@ -20,10 +21,13 @@ const InputSelect: React.FC<IInputSelectProps> = ({
       filterOption={false}
       className={styles.inputSelect}
       size='large'
+      id={id}
       {...rest}
     >
       {dataSelect.map((d) => (
-        <Option key={d.value}>{d.text}</Option>
+        <Option id={`${id}-option-${d.text}`} key={d.value}>
+          {d.text}
+        </Option>
       ))}
       ;
     </Select>

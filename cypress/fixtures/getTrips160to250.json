@@ -1,0 +1,108 @@
+{
+  "count": 257,
+  "last_page": 26,
+  "next": "http://localhost:3001/trips?page=2",
+  "previous": null,
+  "results": [
+    {
+      "id": 2,
+      "origin": "COR",
+      "destination": "BRC",
+      "price": 161,
+      "availability": 2,
+      "data": "2021-11-15",
+      "createdAt": "2022-08-20T21:41:41.663Z",
+      "updatedAt": "2022-08-20T21:41:41.663Z"
+    },
+    {
+      "id": 5,
+      "origin": "COR",
+      "destination": "BRC",
+      "price": 191.74,
+      "availability": 7,
+      "data": "2021-11-20",
+      "createdAt": "2022-08-20T21:41:41.664Z",
+      "updatedAt": "2022-08-20T21:41:41.664Z"
+    },
+    {
+      "id": 6,
+      "origin": "EPA",
+      "destination": "BRC",
+      "price": 215.89,
+      "availability": 8,
+      "data": "2021-11-20",
+      "createdAt": "2022-08-20T21:41:41.664Z",
+      "updatedAt": "2022-08-20T21:41:41.664Z"
+    },
+    {
+      "id": 13,
+      "origin": "COR",
+      "destination": "MDZ",
+      "price": 168.63,
+      "availability": 8,
+      "data": "2021-11-26",
+      "createdAt": "2022-08-20T21:41:41.664Z",
+      "updatedAt": "2022-08-20T21:41:41.664Z"
+    },
+    {
+      "id": 14,
+      "origin": "COR",
+      "destination": "BRC",
+      "price": 204.47,
+      "availability": 9,
+      "data": "2021-11-26",
+      "createdAt": "2022-08-20T21:41:41.664Z",
+      "updatedAt": "2022-08-20T21:41:41.664Z"
+    },
+    {
+      "id": 18,
+      "origin": "EPA",
+      "destination": "BRC",
+      "price": 213.52,
+      "availability": 7,
+      "data": "2021-11-21",
+      "createdAt": "2022-08-20T21:41:41.664Z",
+      "updatedAt": "2022-08-20T21:41:41.664Z"
+    },
+    {
+      "id": 22,
+      "origin": "COR",
+      "destination": "MDZ",
+      "price": 229.48,
+      "availability": 2,
+      "data": "2021-11-18",
+      "createdAt": "2022-08-20T21:41:41.665Z",
+      "updatedAt": "2022-08-20T21:41:41.665Z"
+    },
+    {
+      "id": 29,
+      "origin": "COR",
+      "destination": "BRC",
+      "price": 162.85,
+      "availability": 4,
+      "data": "2021-11-28",
+      "createdAt": "2022-08-20T21:41:41.665Z",
+      "updatedAt": "2022-08-20T21:41:41.665Z"
+    },
+    {
+      "id": 30,
+      "origin": "EPA",
+      "destination": "BRC",
+      "price": 196.39,
+      "availability": 5,
+      "data": "2021-11-28",
+      "createdAt": "2022-08-20T21:41:41.665Z",
+      "updatedAt": "2022-08-20T21:41:41.665Z"
+    },
+    {
+      "id": 42,
+      "origin": "EPA",
+      "destination": "BRC",
+      "price": 196.18,
+      "availability": 3,
+      "data": "2021-11-30",
+      "createdAt": "2022-08-20T21:41:41.666Z",
+      "updatedAt": "2022-08-20T21:41:41.666Z"
+    }
+  ]
+}
