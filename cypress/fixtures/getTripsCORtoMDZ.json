@@ -1,0 +1,108 @@
+{
+  "count": 172,
+  "last_page": 18,
+  "next": "http://localhost:3001/trips?page=2",
+  "previous": null,
+  "results": [
+    {
+      "id": 1,
+      "origin": "COR",
+      "destination": "MDZ",
+      "price": 400,
+      "availability": 9,
+      "data": "2021-11-15",
+      "createdAt": "2022-08-20T21:41:41.663Z",
+      "updatedAt": "2022-08-20T21:41:41.663Z"
+    },
+    {
+      "id": 4,
+      "origin": "COR",
+      "destination": "MDZ",
+      "price": 373.19,
+      "availability": 6,
+      "data": "2021-11-20",
+      "createdAt": "2022-08-20T21:41:41.663Z",
+      "updatedAt": "2022-08-20T21:41:41.663Z"
+    },
+    {
+      "id": 7,
+      "origin": "COR",
+      "destination": "MDZ",
+      "price": 498.97,
+      "availability": 2,
+      "data": "2021-11-16",
+      "createdAt": "2022-08-20T21:41:41.664Z",
+      "updatedAt": "2022-08-20T21:41:41.664Z"
+    },
+    {
+      "id": 10,
+      "origin": "COR",
+      "destination": "MDZ",
+      "price": 284.86,
+      "availability": 1,
+      "data": "2021-11-19",
+      "createdAt": "2022-08-20T21:41:41.664Z",
+      "updatedAt": "2022-08-20T21:41:41.664Z"
+    },
+    {
+      "id": 13,
+      "origin": "COR",
+      "destination": "MDZ",
+      "price": 168.63,
+      "availability": 8,
+      "data": "2021-11-26",
+      "createdAt": "2022-08-20T21:41:41.664Z",
+      "updatedAt": "2022-08-20T21:41:41.664Z"
+    },
+    {
+      "id": 16,
+      "origin": "COR",
+      "destination": "MDZ",
+      "price": 277.06,
+      "availability": 3,
+      "data": "2021-11-21",
+      "createdAt": "2022-08-20T21:41:41.664Z",
+      "updatedAt": "2022-08-20T21:41:41.664Z"
+    },
+    {
+      "id": 19,
+      "origin": "COR",
+      "destination": "MDZ",
+      "price": 298.25,
+      "availability": 4,
+      "data": "2021-11-17",
+      "createdAt": "2022-08-20T21:41:41.664Z",
+      "updatedAt": "2022-08-20T21:41:41.664Z"
+    },
+    {
+      "id": 22,
+      "origin": "COR",
+      "destination": "MDZ",
+      "price": 229.48,
+      "availability": 2,
+      "data": "2021-11-18",
+      "createdAt": "2022-08-20T21:41:41.665Z",
+      "updatedAt": "2022-08-20T21:41:41.665Z"
+    },
+    {
+      "id": 25,
+      "origin": "COR",
+      "destination": "MDZ",
+      "price": 287.99,
+      "availability": 3,
+      "data": "2021-11-27",
+      "createdAt": "2022-08-20T21:41:41.665Z",
+      "updatedAt": "2022-08-20T21:41:41.665Z"
+    },
+    {
+      "id": 28,
+      "origin": "COR",
+      "destination": "MDZ",
+      "price": 357,
+      "availability": 3,
+      "data": "2021-11-28",
+      "createdAt": "2022-08-20T21:41:41.665Z",
+      "updatedAt": "2022-08-20T21:41:41.665Z"
+    }
+  ]
+}
