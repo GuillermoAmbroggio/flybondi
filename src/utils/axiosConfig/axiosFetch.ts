@@ -24,7 +24,9 @@ const axiosFetch: IAxiosFetch = async (url, options) => {
     }).then((response) => response.data);
   }
 
-  return await axios(url, options).then((response) => response.data);
+  return await axios(url, { ...options, withCredentials: true }).then(
+    (response) => response.data,
+  );
 };
 
 export default axiosFetch;
