@@ -88,20 +88,24 @@ const FormRegister: React.FC<IFormRegisterProps> = ({
             <Input />
           </Form.Item>
         </div>
-        <Form.Item
-          label='Contraseña'
-          name='password'
-          rules={[{ required: true }]}
-        >
-          <Input.Password />
-        </Form.Item>
-        <Form.Item
-          label='Confirmar contraseña'
-          name='confirm_password'
-          rules={[{ required: true }]}
-        >
-          <Input.Password />
-        </Form.Item>
+        <div>
+          <Form.Item
+            label='Contraseña'
+            name='password'
+            rules={[{ required: true }]}
+          >
+            <Input.Password />
+          </Form.Item>
+        </div>
+        <div>
+          <Form.Item
+            label='Confirmar contraseña'
+            name='confirm_password'
+            rules={[{ required: true }]}
+          >
+            <Input.Password />
+          </Form.Item>
+        </div>
         <Form.Item className={styles.container_buttonSubmit}>
           <Button
             text='Registarse'

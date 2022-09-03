@@ -63,16 +63,20 @@ const FormLogin: React.FC<IFormLoginProps> = ({
     >
       <Column className={styles.container_forms}>
         <Text variant='title'>Iniciar sesión</Text>
-        <Form.Item label='Correo' name='email' rules={[{ required: true }]}>
-          <Input />
-        </Form.Item>
-        <Form.Item
-          label='Contraseña'
-          name='password'
-          rules={[{ required: true }]}
-        >
-          <Input.Password />
-        </Form.Item>
+        <div>
+          <Form.Item label='Correo' name='email' rules={[{ required: true }]}>
+            <Input />
+          </Form.Item>
+        </div>
+        <div>
+          <Form.Item
+            label='Contraseña'
+            name='password'
+            rules={[{ required: true }]}
+          >
+            <Input.Password />
+          </Form.Item>
+        </div>
         <Form.Item className={styles.container_buttonSubmit}>
           <Button
             text='Iniciar sesión'
