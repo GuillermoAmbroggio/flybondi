@@ -3,7 +3,7 @@ import { countryTypes } from '../../utils/types/countryTypes';
 import Card from '../card/Card';
 import { Text } from '../../atoms';
 import { ArrowRightOutlined } from '@ant-design/icons';
-import { useDate } from '../../hooks';
+import { useDate, useSizeScreen } from '../../hooks';
 import { Column, Flex } from '../../pages/layout';
 import { priceFormat } from '../../utils/format/Format';
 import styles from './cardReservation.module.less';
@@ -22,24 +22,25 @@ const CardReservation: React.FC<ICardReservationProps> = ({
   const { dayNumber, dayString, month, year } = useDate(
     new Date(reservationData.data_go),
   );
+  const isBig = useSizeScreen() === 'big';
+
   const { goBack } = reservationData;
 
   return (
     <Card className={`${className} ${styles.containerCardTrip}`}>
-      <Flex style={{ alignItems: 'center', justifyContent: 'space-between' }}>
+      <Flex className={styles.contentContainer}>
         <Column>
-          <Flex
-            className={styles.textCountries}
-            style={{ alignItems: 'center' }}
-          >
-            <Text variant='title'>{`${
-              countryTypes[reservationData.origin] ?? reservationData.origin
-            } (${reservationData.origin})`}</Text>
-            <ArrowRightOutlined />
-            <Text variant='title'>{`${
-              countryTypes[reservationData.destination] ??
-              reservationData.destination
-            }(${reservationData.destination})`}</Text>
+          <Flex className={styles.textCountries}>
+            <Flex alignItems={'center'}>
+              <Text variant={isBig ? 'title' : 'bodyBold'}>{`${
+                countryTypes[reservationData.origin] ?? reservationData.origin
+              } (${reservationData.origin})`}</Text>
+              <ArrowRightOutlined />
+              <Text variant={isBig ? 'title' : 'bodyBold'}>{`${
+                countryTypes[reservationData.destination] ??
+                reservationData.destination
+              }(${reservationData.destination})`}</Text>
+            </Flex>
             <Tag
               color={goBack ? 'green' : 'orange'}
               className={styles.tagStyle}
@@ -49,7 +50,7 @@ const CardReservation: React.FC<ICardReservationProps> = ({
           </Flex>
           <Text>{`${dayString} ${dayNumber} de ${month} del ${year}`}</Text>
         </Column>
-        <Column>
+        <Column className={styles.footerStyles}>
           <Flex style={{ justifyContent: 'center' }}>
             <Text variant='title'>{`Total: ${priceFormat(
               reservationData.total,

@@ -5,15 +5,22 @@ interface IColumnProps {
   children: React.ReactNode;
   className?: string;
   style?: React.CSSProperties | undefined;
+  alignItems?: React.CSSProperties['alignItems'];
+  justifyContent?: React.CSSProperties['justifyContent'];
 }
 
 const Column: React.FC<IColumnProps> = ({
   children,
   className: classNameProp,
   style: stylePop,
+  alignItems,
+  justifyContent,
 }) => {
   return (
-    <div style={stylePop} className={`${styles.column} ${classNameProp}`}>
+    <div
+      style={{ alignItems, justifyContent, ...stylePop }}
+      className={`${styles.column} ${classNameProp}`}
+    >
       {children}
     </div>
   );

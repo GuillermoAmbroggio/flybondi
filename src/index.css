@@ -65,6 +65,11 @@ p {
   border-radius: var(--m);
 }
 
+.ant-card-head-title {
+  overflow: initial;
+  white-space: normal;
+}
+
 .ant-input-number {
   width: -webkit-fill-available;
 }
@@ -75,4 +80,8 @@ p {
 
 .root {
   min-height: 100vh;
+}
+
+.ant-input-number-group-wrapper {
+  width: -webkit-fill-available;
 }

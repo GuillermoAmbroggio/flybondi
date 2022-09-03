@@ -66,7 +66,7 @@ const FormRegister: React.FC<IFormRegisterProps> = ({
     >
       <Column className={styles.container_forms}>
         <Text variant='title'>Crear una cuenta nueva</Text>
-        <Flex>
+        <div className={styles.containerFullName}>
           <Form.Item
             label='Nombre'
             name='name'
@@ -82,10 +82,12 @@ const FormRegister: React.FC<IFormRegisterProps> = ({
           >
             <Input />
           </Form.Item>
-        </Flex>
-        <Form.Item label='Correo' name='email' rules={[{ required: true }]}>
-          <Input />
-        </Form.Item>
+        </div>
+        <div>
+          <Form.Item label='Correo' name='email' rules={[{ required: true }]}>
+            <Input />
+          </Form.Item>
+        </div>
         <Form.Item
           label='Contraseña'
           name='password'

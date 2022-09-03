@@ -4,3 +4,4 @@ export { default as useDate } from './useDate';
 export { default as useGeneratePdf } from './useGeneratePdf';
 export { default as useGetErrorApi } from './useGetErrorApi';
 export { default as alertSuccess } from './alertSuccess';
+export { default as useSizeScreen } from './useSizeScreen';

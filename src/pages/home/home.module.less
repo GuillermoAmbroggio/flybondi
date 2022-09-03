@@ -16,5 +16,19 @@
 }
 
 .buttonStyle {
-  align-self: center;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .containerHome {
+    padding: var(--m);
+    width: -webkit-fill-available;
+  }
+  .contentCard {
+    flex-direction: column;
+  }
+  .buttonStyle {
+    width: -webkit-fill-available;
+    margin-top: 0px;
+  }
 }

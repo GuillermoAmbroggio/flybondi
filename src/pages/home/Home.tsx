@@ -115,6 +115,7 @@ const Home: React.FC = () => {
                 />
               </Form.Item>
             </Column>
+
             <Button
               id='buttonSubmitByDestination'
               htmlType='submit'
@@ -203,13 +204,14 @@ const Home: React.FC = () => {
                 />
               </Form.Item>
             </Column>
-            <Button
-              id='buttonSubmitByPrice'
-              text='Buscar vuelos'
-              size='large'
-              className={styles.buttonStyle}
-              htmlType='submit'
-            />
+            <Column className={styles.buttonStyle}>
+              <Button
+                id='buttonSubmitByPrice'
+                text='Buscar vuelos'
+                size='large'
+                htmlType='submit'
+              />
+            </Column>
           </div>
         </Form>
       </Card>

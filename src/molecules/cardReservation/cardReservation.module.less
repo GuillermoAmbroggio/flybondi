@@ -2,8 +2,24 @@
   cursor: pointer;
 }
 .textCountries {
-  margin-right: var(--xxl);
+  align-items: center;
 }
 .tagStyle {
   margin-left: var(--l) !important;
+}
+
+.contentContainer {
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  .contentContainer {
+    flex-direction: column;
+  }
+  .textCountries {
+    flex-direction: column;
+  }
+  .footerStyles {
+    text-align: center;
+  }
 }

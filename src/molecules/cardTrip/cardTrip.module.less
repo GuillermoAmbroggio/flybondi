@@ -4,3 +4,17 @@
 .textCountries {
   margin-right: var(--xxl);
 }
+
+.contentCard {
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  .contentCard {
+    flex-direction: column;
+  }
+  .textCountries {
+    margin-right: 0px;
+  }
+}

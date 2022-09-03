@@ -4,7 +4,7 @@ import { countryTypes } from '../../utils/types/countryTypes';
 import Card from '../card/Card';
 import { Text } from '../../atoms';
 import { ArrowRightOutlined } from '@ant-design/icons';
-import { useDate } from '../../hooks';
+import { useDate, useSizeScreen } from '../../hooks';
 import { Column, Flex } from '../../pages/layout';
 import { priceFormat } from '../../utils/format/Format';
 import styles from './cardTrip.module.less';
@@ -25,6 +25,7 @@ const CardTrip: React.FC<ICardTripProps> = ({
   const { dayNumber, dayString, month, year } = useDate(
     new Date(tripData.data),
   );
+  const isBig = useSizeScreen() === 'big';
 
   return (
     <Card
@@ -32,24 +33,24 @@ const CardTrip: React.FC<ICardTripProps> = ({
       className={`${className} ${styles.containerCardTrip}`}
       onClick={onClick}
     >
-      <Flex style={{ alignItems: 'center', justifyContent: 'space-between' }}>
+      <Flex className={styles.contentCard}>
         <Column>
           <Flex
             className={styles.textCountries}
             style={{ alignItems: 'center' }}
           >
-            <Text variant='title'>{`${
+            <Text variant={isBig ? 'title' : 'bodyBold'}>{`${
               countryTypes[tripData.origin] ?? tripData.origin
             } (${tripData.origin})`}</Text>
             <ArrowRightOutlined />
-            <Text variant='title'>{`${
+            <Text variant={isBig ? 'title' : 'bodyBold'}>{`${
               countryTypes[tripData.destination] ?? tripData.destination
             }(${tripData.destination})`}</Text>
           </Flex>
           <Text>{`${dayString} ${dayNumber} de ${month} del ${year}`}</Text>
         </Column>
         <Column>
-          <Flex style={{ justifyContent: 'center' }}>
+          <Flex justifyContent={'center'}>
             <Text variant='title'>{priceFormat(tripData.price)}</Text>
           </Flex>
           <Text>{`Pasajes disponibles: ${tripData.availability}`}</Text>

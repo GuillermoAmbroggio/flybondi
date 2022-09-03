@@ -28,3 +28,21 @@
   width: 100%;
   margin-top: var(--m);
 }
+
+.containerFullName {
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  .containerFullName {
+    display: block;
+  }
+  .mr16 {
+    margin-right: 0px !important;
+  }
+  .container {
+    &_footerText {
+      margin-bottom: var(--m);
+    }
+  }
+}

@@ -15,7 +15,7 @@
   },
   "lint-staged": {
     "*.+(jsx|ts|tsx)": [
-      "eslint --cache",
+      "eslint",
       "prettier --write"
     ]
   },

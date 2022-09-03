@@ -3,7 +3,7 @@ import { CheckboxChangeEvent } from 'antd/lib/checkbox';
 import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Text } from '../../atoms';
-import { useClientStore } from '../../hooks';
+import { useClientStore, useSizeScreen } from '../../hooks';
 import { Button, CardSummary, CardTrip, GoBackButton } from '../../molecules';
 import { EmptyState } from '../../organims';
 import { useSearchTrips } from '../../particules/serverStore/queries';
@@ -37,6 +37,7 @@ const Search: React.FC = () => {
   const [steps, setSteps] = useState<'origin' | 'destination'>('origin');
   const [visibleDrawer, setVisibleDrawer] = useState(false);
   const [visibleModal, setVisibleModal] = useState(false);
+  const screenSize = useSizeScreen();
   const requiredDestination = tripSummary.destination !== null;
 
   const { passengers, price_max, price_min, city_from, city_to } =
@@ -175,7 +176,7 @@ const Search: React.FC = () => {
         />
       ) : null}
       {data && data?.count ? (
-        <Flex justifyContent='space-around'>
+        <Flex justifyContent='space-around' className={styles.contentContainer}>
           <Column className={styles.containersCountries}>
             <Flex alignItems='center'>
               {steps !== 'origin' ? (
@@ -196,6 +197,7 @@ const Search: React.FC = () => {
                   refetch();
                 }}
                 style={{ marginBottom: 16, marginTop: 16, marginRight: 16 }}
+                size={screenSize === 'big' ? 'default' : 'small'}
               />
               <Button
                 text='Filtrar'

@@ -221,7 +221,7 @@ const SearchModalConfirmation: React.FC<ISearchModalConfirmationProps> = ({
           </Text>
           <Form.Item name='payment'>
             <Radio.Group value={valuePaymentForm}>
-              <Flex>
+              <Flex className={styles.containerCardPayments}>
                 {paymentsMethods.map((e, i) => {
                   return (
                     <CardPayments
@@ -263,7 +263,7 @@ const SearchModalConfirmation: React.FC<ISearchModalConfirmationProps> = ({
           </Form.Item>
         </Column>
         {!isAuth ? (
-          <Flex alignItems={'center'}>
+          <Flex className={styles.containerAccount}>
             <Text
               variant='link'
               color='colordefault'
@@ -285,9 +285,14 @@ const SearchModalConfirmation: React.FC<ISearchModalConfirmationProps> = ({
           </Flex>
         ) : null}
 
-        <Form.Item className={styles.buttonStyles}>
-          <Button text='Finalizar compra' type='primary' htmlType='submit' />
-        </Form.Item>
+        <Column className={styles.buttonStyles}>
+          <Button
+            className={styles.buttonStyles}
+            text='Finalizar compra'
+            type='primary'
+            htmlType='submit'
+          />
+        </Column>
       </Form>
     </Modal>
   );
